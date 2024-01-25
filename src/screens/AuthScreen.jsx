@@ -11,6 +11,7 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
   View,
+  ScrollView,
 } from "react-native";
 import { useDispatch } from "react-redux";
 import Input from "../components/Input";
@@ -47,8 +48,15 @@ const AuthScreen = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    return () => {
+      setError(null);
+    };
+  }, []);
+
+  useEffect(() => {
     if (error) {
       Alert.alert("Ha ocurrido un error", error, [{ text: "Ok" }]);
+      setError(null);
     }
   }, [error]);
 
@@ -68,8 +76,28 @@ const AuthScreen = () => {
     if (formState.formIsValid) {
       dispatch(
         signUp(formState.inputValues.email, formState.inputValues.password)
-      );
+      )
+        .then((success) => {
+          if (success) {
+            // Registro exitoso
+            // Puedes realizar acciones adicionales si es necesario
+            console.log("Usuario registrado exitosamente");
+            // No mostrar ningún mensaje aquí
+          } else {
+            // Registro fallido
+            Alert.alert(
+              "Recordatorio",
+              "Si tenes email registrado incia sesión, si te estas registrando la contraseña debe tener 6 o mas caracteres",
+              [{ text: "Ok" }]
+            );
+          }
+        })
+        .catch((error) => {
+          // Manejar cualquier error adicional aquí
+          console.error("Error en el registro:", error);
+        });
     } else {
+      setError(null); // Limpiar el estado de error
       Alert.alert(
         "Formulario inválido",
         "Ingresa un email y contraseña válidos",
@@ -84,9 +112,13 @@ const AuthScreen = () => {
         signIn(formState.inputValues.email, formState.inputValues.password)
       ).then((success) => {
         if (success) {
+          // Autenticación exitosa
+        } else {
+          setError("Error de usuario o contraseña");
         }
       });
     } else {
+      setError(null); // Limpiar el estado de error
       Alert.alert(
         "Formulario inválido",
         "Ingresa un email y contraseña válidos",
@@ -107,12 +139,20 @@ const AuthScreen = () => {
     [dispatchFormState]
   );
 
+  const handleForgotPassword = () => {
+    Alert.alert(
+      "Contactarme para restablecer la contraseña",
+      "Enviame un whatsapp al +00541162366175 con el correo electrónico para blanquear la clave",
+      [{ text: "Ok" }]
+    );
+  };
+
+  const handleSecurityPolicy = () => {
+    // Aquí puedes navegar a la pantalla de política de seguridad o abrir un enlace externo.
+  };
+
   return (
-    <KeyboardAvoidingView
-      style={styles.mainContainer}
-      behavior={Platform.OS === "ios" ? "padding" : "height"}
-      keyboardVerticalOffset={50}
-    >
+    <ScrollView contentContainerStyle={styles.scrollContainer}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.container}>
           <Text style={styles.subtitle}>Tu mejor compañia en la cocina</Text>
@@ -142,6 +182,14 @@ const AuthScreen = () => {
               initialValue=""
             />
           </View>
+          <TouchableOpacity
+            style={styles.forgotPasswordButton}
+            onPress={handleForgotPassword}
+          >
+            <Text style={styles.forgotPasswordText}>
+              ¿Olvidaste tu contraseña?
+            </Text>
+          </TouchableOpacity>
           <View style={styles.footer}>
             <TouchableOpacity style={styles.loginButton} onPress={handleSignIn}>
               <Text style={styles.buttonText}>Iniciar Sesión</Text>
@@ -153,15 +201,21 @@ const AuthScreen = () => {
               <Text style={styles.buttonText}>Registrarse</Text>
             </TouchableOpacity>
           </View>
+          <TouchableOpacity
+            style={styles.securityPolicyLink}
+            onPress={handleSecurityPolicy}
+          >
+            <Text style={styles.securityPolicyText}>Política de Seguridad</Text>
+          </TouchableOpacity>
         </View>
       </TouchableWithoutFeedback>
-    </KeyboardAvoidingView>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
+  scrollContainer: {
+    flexGrow: 1,
     backgroundColor: "#fff",
   },
   container: {
@@ -208,6 +262,24 @@ const styles = StyleSheet.create({
   footer: {
     marginTop: 42,
     width: "90%",
+  },
+  forgotPasswordButton: {
+    marginTop: 10,
+    alignSelf: "flex-end",
+    marginRight: 20,
+  },
+  forgotPasswordText: {
+    color: "#555",
+    fontSize: 14,
+  },
+  securityPolicyLink: {
+    marginTop: 10,
+    alignSelf: "center",
+  },
+  securityPolicyText: {
+    color: "#555",
+    fontSize: 14,
+    textDecorationLine: "underline",
   },
 });
 

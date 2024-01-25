@@ -128,7 +128,7 @@ const RecetasScreen = () => {
       id: "12",
       title: "Invertida de Peras en la Essen (gluten free)",
       image: require("../assets/arroz.jpg"),
-      type: "dulce",
+      type: "Dulce",
       ingredientes:
         "Sarten 24 cm, cocción fuego corona o mínimo hasta terminar cocción ( introducir un palillo y si sale seco esta cocida) - 200 gr de premezcla sin gluten - 200 gr de azúcar orgánica - 5 huevos grandes o 6 medianos - 1 cdita de polvo de hornear - 1 cdita de extracto de vainilla - 2 peras - azúcar blanca c/n",
       receta:
@@ -507,11 +507,160 @@ const RecetasScreen = () => {
       id: "50",
       title: "Bizcocho de durazno",
       image: require("../assets/arroz.jpg"),
-      type: "fit",
+      type: "Dulce",
       ingredientes:
         "2 huevos🥚 - 1/2 taza de aceite de oliva - 100 ml de leche vegetal o animal descremado🥛 - 1 taza de harina integral - 1/2 taza de azúcar mascabo - 1 y 1/2 cdita de polvo para hornear - Esencia de vainilla - 1 o 2 duraznos 🍑🍑",
       receta:
         "Mezclamos los huevos, el aceite, azucar, agregamos harina integral, 100 ml de leche, polvo para hornear. Usamos sarten essen, ponemos los duraznos y por encima volcamos la mezcla. Cocinamos hasta que el bizcochuelo este listo!. Muy sabroso!",
+    },
+    {
+      id: "51",
+      title: "Bizcocho de pomelo rosado/naranja, mandarina o limón",
+      image: require("../assets/arroz.jpg"),
+      type: "Dulce",
+      ingredientes:
+        " Jugo de 2 pomelos y su ralladura (podes elegir naranja, mandarina, limón!) - 1/2 taza de aceite neutro (oliva si te va lo fuerte 😠) - 1 taza de azúcar mascabo - 1 y 1/2 taza de harina integral - 2 huevos - 2 cdta de polvo para hornear ",
+      receta:
+        "Receta: Mezclamos el azúcar, los huevos, la harina, el polvo de hornear, el jugo y la ralladura de pomelo, y batimos la mezcla. Luego, vertemos la preparación en un molde y horneamos a fuego medio durante 35 minutos. Finalmente, desmoldamos el delicioso resultado.",
+    },
+    {
+      id: "52",
+      title: "Bizcocho de avena, banana y choco 🍚🍫🍌🍫🍚🍌🍫🍚🍌",
+      image: require("../assets/arroz.jpg"),
+      type: "Fit",
+      ingredientes:
+        " 120 gr avena en copos🍚 - 200 ml de leche TIBIA 🥹 - 2 huevos🥚🥚 - 2 platanos🍌🍌 - 40 gr de cacao 100% puro de buena calidad 👊👊👊🍫🍫🍫 - 2 sobres de stevia - vainilla un chorrin 💦 -1 cdita polvo para hornear 🏺 - Nueces c/n 🫘🫘",
+      receta:
+        "En un recipiente grande, mezcla los copos de avena con la leche tibia y deja reposar durante unos 10 minutos para que la avena absorba la leche. En otro recipiente, machaca los plátanos maduros hasta obtener un puré. Agrega los huevos a la mezcla de avena y leche, y bate bien. Incorpora el puré de plátano a la mezcla y continúa batiendo. Añade el cacao puro, la stevia, la esencia de vainilla y el polvo para hornear. Mezcla hasta obtener una masa homogénea. Agrega las nueces al gusto y mezcla nuevamente. Vierte la masa en tu Essen. Hornea durante aproximadamente 35-40 minutos, o hasta que al insertar un palillo en el centro, este salga limpio. Deja enfriar el bizcocho antes de desmoldarlo.",
+    },
+    {
+      id: "53",
+      title: "Aros de manzana",
+      image: require("../assets/arroz.jpg"),
+      type: "Fit",
+      ingredientes:
+        "1 manzana 🍎 - 1 tapa de tarta🫓 - 100 gr de azúcar rubia - canela c/n - nuez moscada c/n🌰 - ralladura de 1 limon🍋 - manteca derretida c/n ",
+      receta:
+        "Envuelven los aros de manzana con las tiras de la masa de tarta, las pincelan con manteca derretida y le espolvorean la mezcla de azúcar, canela , nuez moscada y ralladura de limón. Espero que les guste la idea y la hagan! están super ricas!",
+    },
+    {
+      id: "54",
+      title: "Alfajores de Coco 🥥🥥",
+      image: require("../assets/arroz.jpg"),
+      type: "Fit",
+      ingredientes:
+        "100 gr de azúcar orgánica 🍚 - 100 gr de coco rallado 🥥🥥 - 1 huevo 🥚 - Toppings ideales: Dulce de leche repostero o membrillo pisado",
+      receta:
+        "Mezclamos el coco, el huevo y el azucar hasta lograr una masa consistente. Creamos circulos de tamaño alfajor y los llevamos a tu essen, 10 minutos de cada lado. Ideales para armar como alfajores!",
+    },
+    {
+      id: "55",
+      title: "Arroz con Leche! 🍧🥰🥰",
+      image: require("../assets/arroz.jpg"),
+      type: "Dulce",
+      ingredientes:
+        "ingredientes: 1 L de leche descremado🥛- 250gr de arroz blanco común🍚 (podes usar el arroz para risotto) - cáscara de 1 limón 🍋 - 1 rama de canela 🪵- 5 sobres de stevia - nuez moscada c/n (si ponele!!)✨️",
+      receta:
+        "Enjuaga el arroz bajo agua fría para quitar el exceso de almidón. En una cacerola grande, calienta la leche descremada a fuego medio. Cuando la leche esté caliente, agrega el arroz y mezcla bien. Añade la cáscara de limón y la rama de canela a la mezcla. Esto dará sabor al arroz con leche. Cocina a fuego medio-bajo, removiendo constantemente para evitar que el arroz se pegue al fondo de la cacerola. Cuando el arroz esté casi cocido y la mezcla haya espesado, agrega los sobres de stevia y mezcla hasta que estén bien incorporados. Continúa cocinando a fuego bajo hasta que el arroz esté tierno y la mezcla tenga la consistencia deseada. Ajusta la cantidad de stevia según tu preferencia de dulzura. Retira la cáscara de limón y la rama de canela. Ralla un poco de nuez moscada sobre el arroz con leche para darle un toque aromático. Sirve el arroz con leche caliente o déjalo enfriar antes de servir, según tu preferencia. ¡Disfruta de tu arroz con leche con un toque especial de limón, canela y nuez moscada! 🍚🍋🪵✨️",
+    },
+    {
+      id: "56",
+      title: "Queque de manzana",
+      image: require("../assets/arroz.jpg"),
+      type: "Fit",
+      ingredientes:
+        "150gr de harina de avena - 2 cditas de polvo para hornear - 2 cditas de edulcorante - 2 cdas de aceite de oliva - 2 cditas de canela - 25 gr de coco (opcional) - 3 huevos - 10 cdas de agua para aligerar la preparación, 2 Manzanas Rojas, 50gr de pasas de uva (opcional)",
+      receta:
+        "En una licuadora, licuamos todos los ingredientes a excepción de la manzana y de las pasas. En un recipente mezclamos la mezcla y le incluimos las manzanas y las pasas. Llevamos a la escen. Espolvoreamos",
+    },
+    {
+      id: "57",
+      title: "Bizcocho de Frutos Rojos SIN GLUTEN! 🫐🍓🍓🫐💞💞💞",
+      image: require("../assets/arroz.jpg"),
+      type: "Dulce",
+      ingredientes:
+        "INGREDIENTES: 200 gr de Azúcar (o Eritritol para versión más saludable) - 6 huevos🥚🥚 - 200 ml de aceite - 1 pote de yogur natural🥛- jugo y ralladura de 1 limón 🍋 - 2 cdas de polvo para hornear - 400gr de harina de arroz - 200 gr de Frutos Rojos🫐🍓🫐🍓🫐🍓",
+      receta:
+        "Mezclar todos los ingredites con la batindora, primero los liquidos y luego los solidos, el harina de arroz es recomendable incluirlo en tres pasos. Luego picamos las frutillas y las incorporamos junto con los arananos a la mezcla. LLevamos a fuego en tu essen, a fuego corona  durante 50 a 60 minutos",
+    },
+    {
+      id: "58",
+      title: "Budín Matero de Moras Silvestres 🪻🪻 y Naranja 🍊🍊",
+      image: require("../assets/arroz.jpg"),
+      type: "Dulce",
+      ingredientes:
+        "3 huevos, 200 gr de azúcar, 150 cc de aceite neutro, 1 naranja (ralladura y jugo), 250 gr de harina, 1 cdita y 1/2 de polvo para hornear, 200 gr de Moras congeladas",
+      receta:
+        "Batir los huevos con el azucar y agregarle la rayadora con el juego de una naranja, aceite, harina el polvo para hornear y las moras congeladas. Llevamos 40 a 45 minutos a la essen. Desmoldamos, dejamos enfriar y disfrutamos!",
+    },
+    {
+      id: "59",
+      title: "Tarta de Espárragos y Trucha Ahumada 💞",
+      image: require("../assets/arroz.jpg"),
+      type: "Fit",
+      ingredientes:
+        "masa Integral: 250 gr de harina integral - 50ml de aceite de oliva - 2 cdas de semillas - c/n ml de agua - sal y pimienta. Relleno: 1 paquete de Espárragos - 3 huevos - 200ml de crema - 2cdas de queso crema - 2 cdas de queso rallado - Trucha Ahumada 3 trocitos ( si no tenes no es necesario) - sal, pimienta y nuez moscada",
+      receta:
+        "Para la masa simplemente unir todos los ingredientes hasta conseguir una masa homogénea y fácil de manejar. En una sarten cocinar los esparragos con aceite de oliva sal y pimienta, para el ligue mezclar el resto de los ingredientes en un recipiente. En una sartén essen, fonzar la masa, y volcarle la mezcla y los esparragos por encima. Cocinar por 35 minutos a fuego corona",
+    },
+    {
+      id: "60",
+      title: "Galletas de Jengibre y Canela💞💞💞🎄🎄🎄🎁🎁🎁",
+      image: require("../assets/arroz.jpg"),
+      type: "Dulce",
+      ingredientes:
+        "300 gr de Harina 0000 - 130 gr de Manteca - 120 gr de azúcar mascabo o negra - 50gr de Miel o Melaza - 1 cdita de canela - 1 cdita de Jengibre - 1/4 cdita de clavo de olor - 1/4 cdita de nuez moscada ",
+      receta:
+        "Ideales para las fiestas! Mezclamos manteca pomada con azucar negro, colocamos el huevo, agregamos una cucarada de miel, sal vainilla y mezclamos. Dentro del boul agregamos la harina y las especias. Formamos una maza uniforme mezclando. Envolvemos la masa en film y la llevamos a la heladera al menos dos horitas para cortar las galletitas mas facil. Ponemos en la essen a fuego corona y listo! Podes decorarlos con glasé o lo que quieras!",
+    },
+    {
+      id: "61",
+      title: "Bizcocho de cafe y cacao",
+      image: require("../assets/arroz.jpg"),
+      type: "Dulce",
+      ingredientes:
+        "2 huevos - 1 taza de leche (250cc) - 1/2 taza de café expreso (125cc) - 5 cdas de aceite (oliva o neutro) - 3 cdas de edulcorante apto cocción - 2 tazas de harina integral (280gr) - 1/2 taza de cacao amargo puro (70gr) - 2 cdas de polvo para hornear - 1 cdita de bicarbonato (realza el color) - 2 cdas de esencia de vainilla - pizca de sal",
+      receta:
+        "Mezclar los húmedos por un lado, preparamos un café expresso y lo agregamos a la preparación. Recomiendo el uso de productos de calidad, ponemos todo en tu essen con algunas nueces. Cocinar aprox por 40 minutos a fuego corona. ",
+    },
+    {
+      id: "62",
+      title: "Postre tipo Serenito 😱😱",
+      image: require("../assets/arroz.jpg"),
+      type: "Dulce",
+      ingredientes:
+        ".500cc de leche - 3 cdas de Maizena o Fécula de maíz (mezclada con un poco de leche de la receta) - 2 cditas de edulcorante - 2 cditas de esencia de vainilla - 2 cdas de DDL (opcional)",
+      receta:
+        "Calentas la leche y antes que hierva incluis la maizena y el edulcorante y mezclas hasta que nape la cuchara o no tenga sabor a maizena. Fuera del fuego le agregaas la vainlla y mezclas. Sacas del fuego y llevas a la heladera hasta que enfríe. Pásalo a un boul y ponele un film al contacto de la preparación para que no se le forme una película durita. Déjalo enfriar muy bien y antes de servirlo batilo para que quede más cremoso! ",
+    },
+    {
+      id: "63",
+      title: "Queque de manzana",
+      image: require("../assets/arroz.jpg"),
+      type: "Fit",
+      ingredientes:
+        "150gr de harina de avena - 2 cditas de polvo para hornear - 2 cditas de edulcorante - 2 cdas de aceite de oliva - 2 cditas de canela - 25 gr de coco (opcional) - 3 huevos - 10 cdas de agua para aligerar la preparación, 2 Manzanas Rojas, 50gr de pasas de uva (opcional)",
+      receta:
+        "En una licuadora, licuamos todos los ingredientes a excepción de la manzana y de las pasas. En un recipente mezclamos la mezcla y le incluimos las manzanas y las pasas. Llevamos a la escen. Espolvoreamos",
+    },
+    {
+      id: "64",
+      title: "Mermelada de Moras silvestres 🪻🪻🪻",
+      image: require("../assets/arroz.jpg"),
+      type: "Dulce",
+      ingredientes: "1 kg de moras, 500 gr de azúcar, 1 limón (jugo)",
+      receta:
+        "Vas a mezclar todos los ingredientes y lo vas a cocinar 50 min a temperatura media. Hace la prueba del plato para darte cuenta la consistencia de la mermelada, si ves que esta muy liquida seguis la cocción. El azúcar y el limón actúan como conservantes (aparte el limón realza el color 💞 y no le aporta el sabor a limón) dura perfectamente 1 meses en la heladera. Le podes poner la mitad de azúcar, pero te va a durar 1 semana en la heladera. 😉 Los frascos de vidrio los vas a hervir unos 15 min junto con la tapa, los dejas enfriar y listo para trasvasar.",
+    },
+    {
+      id: "65",
+      title: "Budín de Limón 🍋tipo Starbucks 🤯🤩🤩",
+      image: require("../assets/arroz.jpg"),
+      type: "Dulce",
+      ingredientes:
+        "200 gr de azúcar - 1 ralladura de limón - 2 huevos grandes - 2 cdas de aceite neutro - 2 cdas de jugo de limón - 110 gr de manteca pomada - 5 gr de polvo para hornear - 187 gr de harina común - 125cc de leche - 1 cdita de sal",
+      receta:
+        "Te gusta ir a statbucks pero esta mas caro que comprar un departamento, no importa aca tenes la receta de su budín de limon. Mezclar el azucar y la rayadura de limon y trabajar 5 minutos. Una vez que está ma manteca pomada agregar el aceite y el juego de limon y mezclar. Luego agregar el resto de los ingredientes hasta que quede bien lisito y lo mandas a un sabarín. Agregarle glase de limón por encima!",
     },
   ];
 
