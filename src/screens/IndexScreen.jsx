@@ -5,61 +5,70 @@ import {
   Text,
   View,
   Image,
-  Linking,
+  ScrollView,
+  Dimensions,
 } from "react-native";
-import Icon from "react-native-vector-icons/FontAwesome";
-import Ionicons from "react-native-vector-icons/Ionicons";
+
+const { width: screenWidth } = Dimensions.get("window");
 
 const IndexScreen = ({ navigation }) => {
   const navigateToBread = () => {
     navigation.navigate("Recetas");
   };
 
-  const openWhatsApp = () => {
-    Linking.openURL("https://api.whatsapp.com/send?phone=00541162366175");
-  };
-
-  const navigateToProducts = () => {
-    navigation.navigate("Categories");
+  const navigateToLista = () => {
+    navigation.navigate("Lista");
   };
 
   const navigateToTeam = () => {
     navigation.navigate("Team");
   };
 
-  const navigateToLista = () => {
-    navigation.navigate("Lista");
+  const navigateToGame = () => {
+    navigation.navigate("Game");
   };
 
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.presentationContainer}>
         <Image
           style={styles.presentationImage}
           source={require("../assets/imageninicio.jpg")}
         />
       </View>
-
-      <View style={styles.topImagesContainer}>
-        <TouchableOpacity
-          style={styles.imageContainer}
-          onPress={navigateToBread}
-        >
-          <Image style={styles.image} source={require("../assets/foto2.jpg")} />
-          <Text style={styles.imageText}>Recetas</Text>
-        </TouchableOpacity>
+      <View style={styles.welcomeCard}>
+        <Text style={styles.welcomeMessage}>
+          ¡Bienvenido a nuestra aplicación de cocina! Descubre recetas, crea tu
+          lista de compras, gestiona tus productos y obtén consejos útiles.
+        </Text>
       </View>
 
-      <View style={styles.bottomImagesContainer}>
-        <TouchableOpacity
-          style={styles.imageContainer}
-          onPress={navigateToLista}
-        >
-          <Image style={styles.image} source={require("../assets/tips.jpg")} />
-          <Text style={styles.imageText}>Lista de supermercado</Text>
+      <View style={styles.imageContainer}>
+        <TouchableOpacity style={styles.image} onPress={navigateToBread}>
+          <Image
+            style={styles.image}
+            source={require("../assets/Misrecetas.png")}
+          />
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.image} onPress={navigateToLista}>
+          <Image
+            style={styles.image}
+            source={require("../assets/Listadesupermercado.png")}
+          />
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.image} onPress={navigateToGame}>
+          <Image
+            style={styles.image}
+            source={require("../assets/Misproductos.png")}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.image} onPress={navigateToTeam}>
+          <Image style={styles.image} source={require("../assets/Tips.png")} />
         </TouchableOpacity>
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -67,54 +76,50 @@ export default IndexScreen;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
     alignItems: "center",
     justifyContent: "center",
     padding: 10,
     marginBottom: 20,
   },
-  logoContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
+  welcomeCard: {
+    width: "100%",
+    backgroundColor: "#add8e6", // Color de la tarjeta de bienvenida
+    borderRadius: 8,
+    padding: 15,
+    marginVertical: 10,
+  },
+  welcomeMessage: {
+    fontSize: 16,
+    fontWeight: "bold",
+    textAlign: "center",
+  },
+  presentationContainer: {
+    width: "100%",
+    aspectRatio: 2, // 2:1 ratio
     marginBottom: 10,
   },
-  topImagesContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: 20,
-  },
-  bottomImagesContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+  presentationImage: {
+    width: "100%",
+    height: undefined,
+    aspectRatio: 2, // 2:1 ratio
+    resizeMode: "cover",
+    borderRadius: 10,
   },
   imageContainer: {
-    width: "48%",
+    width: "100%",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  image: {
+    width: screenWidth * 0.8,
+    height: undefined,
+    aspectRatio: 16 / 9, // Ajusta a la relación de aspecto original de las imágenes
     backgroundColor: "#eee",
     borderRadius: 10,
     overflow: "hidden",
     marginBottom: 10,
-  },
-  image: {
-    width: "100%",
-    height: 150,
-  },
-  imageText: {
-    padding: 10,
-    textAlign: "center",
-  },
-  iconContainer: {
-    marginBottom: 20,
-  },
-  presentationContainer: {
-    alignItems: "center",
-    marginBottom: 20,
-    width: "100%",
-  },
-  presentationImage: {
-    width: "100%",
-    height: 200,
-    resizeMode: "cover",
-    borderRadius: 10,
+    alignItems: "center", // Centrar verticalmente
   },
 });

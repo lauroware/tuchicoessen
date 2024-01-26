@@ -20,7 +20,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.lauroware.tuchicomartin"
+      "package": "com.lauroware.tuchicomartin",
+      "publishBundlePath": "android/app/build/outputs/bundle/release/app-release.aab"
     },
     "web": {
       "favicon": "./assets/favicon.png"

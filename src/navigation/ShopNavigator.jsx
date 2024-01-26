@@ -11,6 +11,7 @@ import DetailsScreen from "../screens/DetailsScreen";
 import ListaScreen from "../screens/ListaScreen";
 import RecetasDetail from "../screens/RecetasDetail";
 import TeamDetail from "../screens/TeamDetail";
+import GameScreen from "../screens/GameScreen";
 
 const ShopNavigator = () => {
   const Stack = createNativeStackNavigator();
@@ -30,6 +31,7 @@ const ShopNavigator = () => {
       <Stack.Screen name="Team" component={TeamScreen} />
       <Stack.Screen name="RecetasDetail" component={RecetasDetail} />
       <Stack.Screen name="TeamDetail" component={TeamDetail} />
+      <Stack.Screen name="Game" component={GameScreen} />
 
       <Stack.Screen
         name="Categories"

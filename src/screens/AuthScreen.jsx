@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useReducer, useState } from "react";
+import { Dimensions } from "react-native";
 import {
   Alert,
   Image,
@@ -182,6 +183,19 @@ const AuthScreen = () => {
               initialValue=""
             />
           </View>
+
+          <View style={styles.footer}>
+            <TouchableOpacity style={styles.loginButton} onPress={handleSignIn}>
+              <Text style={styles.buttonText}>Iniciar Sesión</Text>
+            </TouchableOpacity>
+          </View>
+          <TouchableOpacity
+            style={styles.registerButton}
+            onPress={handleSignUp}
+          >
+            <Text style={styles.buttonText}>Registrarse</Text>
+          </TouchableOpacity>
+
           <TouchableOpacity
             style={styles.forgotPasswordButton}
             onPress={handleForgotPassword}
@@ -190,17 +204,7 @@ const AuthScreen = () => {
               ¿Olvidaste tu contraseña?
             </Text>
           </TouchableOpacity>
-          <View style={styles.footer}>
-            <TouchableOpacity style={styles.loginButton} onPress={handleSignIn}>
-              <Text style={styles.buttonText}>Iniciar Sesión</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.registerButton}
-              onPress={handleSignUp}
-            >
-              <Text style={styles.buttonText}>Registrarse</Text>
-            </TouchableOpacity>
-          </View>
+
           <TouchableOpacity
             style={styles.securityPolicyLink}
             onPress={handleSecurityPolicy}
@@ -213,72 +217,77 @@ const AuthScreen = () => {
   );
 };
 
+const { height, width } = Dimensions.get("window");
+
 const styles = StyleSheet.create({
   scrollContainer: {
     flexGrow: 1,
     backgroundColor: "#fff",
   },
   container: {
-    paddingTop: 100,
+    paddingTop: height * 0.1,
     flex: 1,
     alignItems: "center",
   },
   image: {
-    width: "100%",
-    height: "40%",
+    width: width,
+    height: height * 0.4,
     resizeMode: "contain",
   },
   subtitle: {
-    marginTop: 10,
+    marginTop: height * 0.02,
     fontSize: 16,
     fontWeight: "bold",
     color: "#555",
   },
   inputContainer: {
-    width: "90%",
+    width: width * 0.9,
+    marginBottom: height * 0.02,
   },
   loginButton: {
     backgroundColor: "#F9A924",
-    width: "100%",
-    height: 50,
-    borderRadius: 50,
+    width: width * 0.9,
+    height: height * 0.07,
+    borderRadius: height * 0.035,
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 10,
+    marginBottom: height * 0.02,
   },
   registerButton: {
     backgroundColor: "#F9A924",
-    width: "100%",
-    height: 50,
-    borderRadius: 50,
+    width: width * 0.9,
+    height: height * 0.07,
+    borderRadius: height * 0.035,
     justifyContent: "center",
     alignItems: "center",
   },
   buttonText: {
     color: "#fff",
-    fontSize: 16,
+    fontSize: width * 0.04,
     fontWeight: "bold",
   },
   footer: {
-    marginTop: 42,
-    width: "90%",
+    marginTop: height * 0.03,
+    width: width * 0.9,
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
   forgotPasswordButton: {
-    marginTop: 10,
+    marginTop: height * 0.01,
     alignSelf: "flex-end",
-    marginRight: 20,
+    marginRight: width * 0.04,
   },
   forgotPasswordText: {
     color: "#555",
-    fontSize: 14,
+    fontSize: width * 0.03,
   },
   securityPolicyLink: {
-    marginTop: 10,
+    marginTop: height * 0.01,
     alignSelf: "center",
   },
   securityPolicyText: {
     color: "#555",
-    fontSize: 14,
+    fontSize: width * 0.03,
     textDecorationLine: "underline",
   },
 });
