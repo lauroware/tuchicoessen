@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
-const GameScreen = () => {
+const Viborita = () => {
   // Estado del juego
   const [snake, setSnake] = useState([{ x: 0, y: 0 }]);
   const [food, setFood] = useState({ x: 5, y: 5 });
@@ -118,7 +118,7 @@ const GameScreen = () => {
           <View style={styles.horizontalButtons}>
             <TouchableOpacity
               onPress={() => changeDirection("LEFT")}
-              style={[styles.button, { marginRight: 10 }]}
+              style={[styles.button, { marginRight: 40 }]}
             >
               <Text>←</Text>
             </TouchableOpacity>
@@ -136,7 +136,10 @@ const GameScreen = () => {
             <Text>↓</Text>
           </TouchableOpacity>
         </View>
-        <TouchableOpacity onPress={resetGame} style={styles.button}>
+        <TouchableOpacity
+          onPress={resetGame}
+          style={[styles.button, { marginRight: 10 }]}
+        >
           <Text>Reset</Text>
         </TouchableOpacity>
       </View>
@@ -190,4 +193,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default GameScreen;
+export default Viborita;

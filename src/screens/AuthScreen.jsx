@@ -18,6 +18,7 @@ import { useDispatch } from "react-redux";
 import Input from "../components/Input";
 import donut from "../assets/foto1.jpg";
 import { signUp, signIn } from "../store/actions/auth.action";
+import { Linking } from "react-native";
 
 const FORM_INPUT_UPDATE = "FORM_INPUT_UPDATE";
 
@@ -142,14 +143,20 @@ const AuthScreen = () => {
 
   const handleForgotPassword = () => {
     Alert.alert(
-      "Contactarme para restablecer la contraseña",
-      "Enviame un whatsapp al +00541162366175 con el correo electrónico para blanquear la clave",
+      "Contactame para restablecer la contraseña",
+      "Te olvidaste tu clave? Enviame un correo a martinurquiza07@gmail.com o contactame y a mi whatsapp con tu correo registrado y te blanqueo la clave.",
       [{ text: "Ok" }]
     );
   };
 
   const handleSecurityPolicy = () => {
-    // Aquí puedes navegar a la pantalla de política de seguridad o abrir un enlace externo.
+    const securityPolicyURL =
+      "https://lauroware.github.io/politicadeprivacidadtuchicoessen/";
+
+    // Abre la URL utilizando Linking.openURL
+    Linking.openURL(securityPolicyURL).catch((err) =>
+      console.error("Error al abrir la URL: ", err)
+    );
   };
 
   return (

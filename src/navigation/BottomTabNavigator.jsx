@@ -1,21 +1,22 @@
-import CartNavigator from "./CartNavigator";
-import ShopNavigator from "./ShopNavigator";
-import OrdersNavigator from "./OrdersNavigator";
+import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Linking } from "react-native";
 
+// Asegúrate de importar ShopNavigator
+import ShopNavigator from "./ShopNavigator";
+import CartNavigator from "./CartNavigator";
+import OrdersNavigator from "./OrdersNavigator";
+
 const BottomTabs = createBottomTabNavigator();
 
-export default BottomTabNavigator = () => {
+const BottomTabNavigator = () => {
   const openWhatsApp = () => {
-    // Cambia 'whatsapp://send?phone=XXXXXXXXX' al número de teléfono o enlace de WhatsApp que desees.
     Linking.openURL("whatsapp://send?phone=+5491151457232");
   };
 
   const openInstagram = () => {
-    // Cambia 'https://www.instagram.com/tu_usuario/' al enlace de tu perfil de Instagram.
     Linking.openURL("https://www.instagram.com/tuchicoessen/");
   };
 
@@ -31,10 +32,8 @@ export default BottomTabNavigator = () => {
         name="ShopNavigator"
         component={ShopNavigator}
         options={{
-          tabBarIcon: () => (
-            <View>
-              <Ionicons name="home" size={20} color="white" />
-            </View>
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="home" size={size} color={color} />
           ),
         }}
       />
@@ -42,9 +41,9 @@ export default BottomTabNavigator = () => {
         name="Cart"
         component={CartNavigator}
         options={{
-          tabBarIcon: () => (
+          tabBarIcon: ({ color, size }) => (
             <TouchableOpacity onPress={openWhatsApp}>
-              <Ionicons name="logo-whatsapp" size={20} color="white" />
+              <Ionicons name="logo-whatsapp" size={size} color="green" />
             </TouchableOpacity>
           ),
         }}
@@ -53,9 +52,9 @@ export default BottomTabNavigator = () => {
         name="OrdersTab"
         component={OrdersNavigator}
         options={{
-          tabBarIcon: () => (
+          tabBarIcon: ({ color, size }) => (
             <TouchableOpacity onPress={openInstagram}>
-              <Ionicons name="logo-instagram" size={20} color="white" />
+              <Ionicons name="logo-instagram" size={size} color="fuchsia" />
             </TouchableOpacity>
           ),
         }}
@@ -68,15 +67,17 @@ const styles = StyleSheet.create({
   tabBar: {
     backgroundColor: "#333",
     paddingTop: 5,
-    borderTopEndRadius: 30,
-    borderTopStartRadius: 30,
-    heigth: 85,
-    position: "absolute",
+    borderTopEndRadius: 0,
+    borderTopStartRadius: 0,
+    height: 65,
+    position: "relative",
     shadowColor: "#333",
-    shadowOffset: { width: 0, heigth: 0 },
-    shadowOpacity: 0.2,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
     shadowRadius: 5,
-    elevation: 4,
-    bottom: -10,
+    elevation: 5,
+    bottom: 0,
   },
 });
+
+export default BottomTabNavigator;

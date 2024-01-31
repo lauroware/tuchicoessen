@@ -27,6 +27,9 @@ const IndexScreen = ({ navigation }) => {
   const navigateToGame = () => {
     navigation.navigate("Game");
   };
+  const navigateToViborita = () => {
+    navigation.navigate("Viborita");
+  };
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
@@ -38,8 +41,9 @@ const IndexScreen = ({ navigation }) => {
       </View>
       <View style={styles.welcomeCard}>
         <Text style={styles.welcomeMessage}>
-          ¡Bienvenido a nuestra aplicación de cocina! Descubre recetas, crea tu
-          lista de compras, gestiona tus productos y obtén consejos útiles.
+          ¡Bienvenido a mi aplicación de cocina! Descubrí recetas, crea tu lista
+          de compras, conocé los productos disponibles y obtené consejos útiles
+          para tu cocina.
         </Text>
       </View>
 
@@ -51,13 +55,6 @@ const IndexScreen = ({ navigation }) => {
           />
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.image} onPress={navigateToLista}>
-          <Image
-            style={styles.image}
-            source={require("../assets/Listadesupermercado.png")}
-          />
-        </TouchableOpacity>
-
         <TouchableOpacity style={styles.image} onPress={navigateToGame}>
           <Image
             style={styles.image}
@@ -66,6 +63,12 @@ const IndexScreen = ({ navigation }) => {
         </TouchableOpacity>
         <TouchableOpacity style={styles.image} onPress={navigateToTeam}>
           <Image style={styles.image} source={require("../assets/Tips.png")} />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.image} onPress={navigateToLista}>
+          <Image
+            style={styles.image}
+            source={require("../assets/Listadesupermercado.png")}
+          />
         </TouchableOpacity>
       </View>
     </ScrollView>

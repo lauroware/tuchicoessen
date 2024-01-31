@@ -15,16 +15,21 @@ const VideoScreen = () => {
     {
       id: "0",
       title:
-        "Aquí tienes un video explicativo de los productos. Cualquier duda, no dudes en consultarme vía Instagram o WhatsApp.",
+        "Aca tenés videos explicativos de los productos. Si querés mas info de alguno de ellos, contactame.",
     },
-    { id: "1", title: "Flip", videoId: "EuD8kF4_iAs" },
-    { id: "2", title: "Cacerola Cuadrada", videoId: "zCrEpCUYOiI" },
-    { id: "3", title: "Sartén Express", videoId: "3AImOCdWMeg" },
-    { id: "4", title: "Bifera", videoId: "luMmxD0bOHU" },
-    { id: "5", title: "Linea Nuit", videoId: "tGKWufBFHDg" },
-    { id: "6", title: "Baby", videoId: "Anxwc07R4-k" },
-    { id: "7", title: "Wok", videoId: "CnMjuBIn3WE" },
-    { id: "8", title: "Savarin", videoId: "5D-xQBC_eeQ" },
+    { id: "1", title: "Presentación", videoId: "soPg6eIghTA" },
+    { id: "2", title: "Cuadrada de 24cm", videoId: "KA51J14C5T8" },
+    { id: "3", title: "Sartén Express", videoId: "4U7OHEI79xM" },
+    { id: "4", title: "Bifera 23x33", videoId: "tqSskldD32A" },
+    { id: "5", title: "Linea Nuit 24cm", videoId: "oefxGElNFPQ" },
+    { id: "6", title: "Cacerola Baby 18cm", videoId: "EEsfxAfjyBI" },
+    { id: "7", title: "Wok", videoId: "0UqQxcrIHdk" },
+    { id: "8", title: "Jarrito Quick", videoId: "E_ky_5jLomg" },
+    { id: "9", title: "Flip 2.1", videoId: "KrLwPYvLh80" },
+    { id: "10", title: "Cacerola de 24 CM", videoId: "9iVz6qKfKlc" },
+    { id: "11", title: "Sartén de 24 CM", videoId: "56Teco7mCS4" },
+    { id: "12", title: "Cacerola de 18 CM", videoId: "vXL220QWSOI" },
+    { id: "13", title: "Cacerola de 20 CM", videoId: "IZjIRlo8ID8" },
     // ... más videos
   ];
 
@@ -35,8 +40,8 @@ const VideoScreen = () => {
   const renderWelcomeCard = () => (
     <View style={styles.welcomeCard}>
       <Text style={styles.welcomeMessage}>
-        ¡Aquí tienes un video explicativo de los productos! Cualquier duda, no
-        dudes en consultarme vía Instagram o WhatsApp.
+        ¡Aquí tienes un video explicativo de los productos! Cualquier duda,
+        contactame.
       </Text>
     </View>
   );
