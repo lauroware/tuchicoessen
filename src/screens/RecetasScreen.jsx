@@ -984,7 +984,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   filterButtonActive: {
-    backgroundColor: "orange",
+    backgroundColor: "#ff7100",
   },
   filterButtonTextActive: {
     color: "#fff",
@@ -999,7 +999,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     width: "100%",
     height: 100,
-    backgroundColor: "orange",
+    backgroundColor: "#ff7100",
     borderRadius: 10,
     overflow: "hidden",
     marginBottom: 10,
@@ -1016,6 +1016,7 @@ const styles = StyleSheet.create({
     padding: 10,
     textAlign: "center",
     fontWeight: "bold",
+    color: "#fff",
   },
   imageType: {
     backgroundColor: "rgba(0, 0, 0, 0.6)",

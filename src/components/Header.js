@@ -11,7 +11,7 @@ const Header = () => {
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: "#333",
+    backgroundColor: "#000000",
     height: 90,
     flexDirection: "row", // Agregamos flexDirection para alinear elementos en fila
     justifyContent: "flex-end", // Alineamos los elementos al final del eje principal (derecha)

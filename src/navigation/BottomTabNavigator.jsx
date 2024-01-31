@@ -33,7 +33,7 @@ const BottomTabNavigator = () => {
         component={ShopNavigator}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="home" size={size} color={color} />
+            <Ionicons name="home" size={size} color="white" />
           ),
         }}
       />
@@ -43,7 +43,7 @@ const BottomTabNavigator = () => {
         options={{
           tabBarIcon: ({ color, size }) => (
             <TouchableOpacity onPress={openWhatsApp}>
-              <Ionicons name="logo-whatsapp" size={size} color="green" />
+              <Ionicons name="logo-whatsapp" size={size} color="white" />
             </TouchableOpacity>
           ),
         }}
@@ -54,7 +54,7 @@ const BottomTabNavigator = () => {
         options={{
           tabBarIcon: ({ color, size }) => (
             <TouchableOpacity onPress={openInstagram}>
-              <Ionicons name="logo-instagram" size={size} color="fuchsia" />
+              <Ionicons name="logo-instagram" size={size} color="white" />
             </TouchableOpacity>
           ),
         }}
@@ -65,7 +65,7 @@ const BottomTabNavigator = () => {
 
 const styles = StyleSheet.create({
   tabBar: {
-    backgroundColor: "#333",
+    backgroundColor: "#000000",
     paddingTop: 5,
     borderTopEndRadius: 0,
     borderTopStartRadius: 0,

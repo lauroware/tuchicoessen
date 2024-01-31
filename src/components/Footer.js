@@ -7,7 +7,7 @@ const Footer = () => {
 
 const styles = StyleSheet.create({
   footer: {
-    backgroundColor: "#333",
+    backgroundColor: "#000000",
     height: 5,
     justifyContent: "center",
     alignItems: "center",

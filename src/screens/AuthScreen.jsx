@@ -163,7 +163,7 @@ const AuthScreen = () => {
     <ScrollView contentContainerStyle={styles.scrollContainer}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.container}>
-          <Text style={styles.subtitle}>Tu mejor compañia en la cocina</Text>
+          <Text style={styles.subtitle}>TU MEJOR ALIADO EN LA COCINA</Text>
           <Image style={styles.image} source={donut} />
           <View style={styles.inputContainer}>
             <Input
@@ -243,7 +243,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     marginTop: height * 0.02,
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: "bold",
     color: "#555",
   },
@@ -252,7 +252,7 @@ const styles = StyleSheet.create({
     marginBottom: height * 0.02,
   },
   loginButton: {
-    backgroundColor: "#F9A924",
+    backgroundColor: "#FF7100",
     width: width * 0.9,
     height: height * 0.07,
     borderRadius: height * 0.035,
@@ -261,7 +261,7 @@ const styles = StyleSheet.create({
     marginBottom: height * 0.02,
   },
   registerButton: {
-    backgroundColor: "#F9A924",
+    backgroundColor: "#FF7100",
     width: width * 0.9,
     height: height * 0.07,
     borderRadius: height * 0.035,
@@ -286,7 +286,7 @@ const styles = StyleSheet.create({
   },
   forgotPasswordText: {
     color: "#555",
-    fontSize: width * 0.03,
+    fontSize: width * 0.04,
   },
   securityPolicyLink: {
     marginTop: height * 0.01,

@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   welcomeCard: {
-    backgroundColor: "#add8e6", // Color para la tarjeta de bienvenida
+    backgroundColor: "#000000", // Color para la tarjeta de bienvenida
     borderRadius: 8,
     padding: 15,
     marginVertical: 8,
@@ -97,9 +97,10 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     textAlign: "center",
+    color: "#ffffff",
   },
   videoItem: {
-    backgroundColor: "#ffd1dc", // Color pastel
+    backgroundColor: "#FF7100", // Color pastel
     borderRadius: 8,
     padding: 15,
     marginVertical: 8,
@@ -108,6 +109,7 @@ const styles = StyleSheet.create({
   videoTitle: {
     fontSize: 18,
     fontWeight: "bold",
+    color: "#ffffff",
   },
 });
 

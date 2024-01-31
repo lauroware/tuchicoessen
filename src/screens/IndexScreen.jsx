@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   },
   welcomeCard: {
     width: "100%",
-    backgroundColor: "#add8e6", // Color de la tarjeta de bienvenida
+    backgroundColor: "#FF7100", // Color de la tarjeta de bienvenida
     borderRadius: 8,
     padding: 15,
     marginVertical: 10,
@@ -96,6 +96,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
     textAlign: "center",
+    color: "white",
   },
   presentationContainer: {
     width: "100%",

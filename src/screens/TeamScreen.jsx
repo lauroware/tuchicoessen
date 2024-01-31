@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
   cardContainer: {
     width: "100%",
     height: 100,
-    backgroundColor: "#e0e0e0",
+    backgroundColor: "#FF7100",
     borderRadius: 10,
     marginBottom: 10,
     justifyContent: "center",
@@ -139,6 +139,7 @@ const styles = StyleSheet.create({
   cardTitle: {
     fontSize: 18,
     fontWeight: "bold",
+    color: "#ffffff",
   },
   cardIngredientes: {
     marginTop: 5,
