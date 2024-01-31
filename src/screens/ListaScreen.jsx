@@ -279,7 +279,7 @@ export default function App() {
         <>
           <View style={styles.pickerContainer}>
             <Text style={styles.pickerLabel}>Seleccionar producto:</Text>
-            <View style={styles.picker}>
+            <View style={styles.expandedPicker}>
               <Text
                 onPress={() => {}}
                 style={styles.pickerText}
@@ -358,6 +358,15 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: Constants.statusBarHeight,
   },
+  expandedPicker: {
+    borderColor: "#4630eb",
+    borderRadius: 4,
+    borderWidth: 1,
+    maxHeight: 200,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+  },
+
   heading: {
     fontSize: 25,
     fontWeight: "bold",
