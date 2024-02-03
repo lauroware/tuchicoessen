@@ -433,8 +433,8 @@ const RecetasScreen = () => {
       id: "36",
       title:
         "Tortilla mixta todo en crudo 🤤🤤🤤 (conserva todo los nutrientes)",
-      image: require("../assets/arroz.jpg"),
-      type: "fit",
+      image: require("../assets/tortillapapas.png"),
+      type: "Fit",
       ingredientes:
         "1 papas grande o 2 medianas, 1 boniato grande o 2 medianos, 5 a 6 huevos dependiendo el tamaño, Jamos cocido natural c/n, Queso muzzarella c/n, Medio morrón colorado, 1 cebolla morada, Sal y pimienta, Ajo en polvo, Nuez moscada, Nuez moscada, Orégano, Paprika",
       receta:
@@ -746,13 +746,15 @@ const RecetasScreen = () => {
     },
     {
       id: "63",
-      title: "Queque de manzana",
-      image: require("../assets/queque.png"),
+      title: "Pizza de zanahorias 🤩🤩🥰🥰",
+      image: require("../assets/zanahoria.png"),
       type: "Fit",
       ingredientes:
-        "150gr de harina de avena - 2 cditas de polvo para hornear - 2 cditas de edulcorante - 2 cdas de aceite de oliva - 2 cditas de canela - 25 gr de coco (opcional) - 3 huevos - 10 cdas de agua para aligerar la preparación, 2 Manzanas Rojas, 50gr de pasas de uva (opcional)",
+        "Ingredientes:.1 zanahoria grande .2 huevos chicos o 1 grande.sal, pimienta y orégano .c/n salsa de tomate .fetas de queso fresco .fetas de tomate .albahaca y aceite de oliva, si no tenes con orégano va de 10🥰🥰",
       receta:
-        "En una licuadora, licuamos todos los ingredientes a excepción de la manzana y de las pasas. En un recipente mezclamos la mezcla y le incluimos las manzanas y las pasas. Llevamos a la escen. Espolvoreamos",
+        "Mezclo una zanahoria rayada con dos huevos, sal, pimienta y oregano hasta tener una mezcla consistente. Ponemos la mezcla en una essen, sin aceites ni agregados. Damos vuelta y ponemos salsa de tomate, queso, tomates, oregano, albaca y lo que quieras! Cuando se derrite el queso retiras.",
+      instagramLink:
+        "https://www.instagram.com/reel/C2IQFkerPDS/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     },
     {
       id: "64",
@@ -805,7 +807,7 @@ const RecetasScreen = () => {
       id: "68",
       title: "Pan de Lentejas 🤯🤯🤯",
       image: require("../assets/pandearvejas.png"),
-      type: "fit",
+      type: "Fit",
       ingredientes:
         ".1 lata de lentejas.3 huevos.6 cdas de aceite de oliva.1 cda de polvo para hornear. sal y pimienta",
       receta:
@@ -824,18 +826,6 @@ const RecetasScreen = () => {
         "Rayamos una papa bien grande y le sacamos toda el agua que tenga. Cocinamos unas cebollas, hasta que queden bien caramelizadas, agregamos sal, aji molido y lo que quieras. Aceitamos la flip y ponemos las papas rayada. Cocinamos 15 minutos de un lado, una vez que hace piso, la damos vuelta y le ponemos del otro lado, la cebolla y dejamos por 10 minutos. Una vez que quede bien crocante, agregamos el queso, sal pimienta",
       instagramLink:
         "https://www.instagram.com/reel/C2nQxwtLijD/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-    },
-    {
-      id: "70",
-      title: "Pizza de zanahorias 🤩🤩🥰🥰",
-      image: require("../assets/zanahoria.png"),
-      type: "fit",
-      ingredientes:
-        "Ingredientes:.1 zanahoria grande .2 huevos chicos o 1 grande.sal, pimienta y orégano .c/n salsa de tomate .fetas de queso fresco .fetas de tomate .albahaca y aceite de oliva, si no tenes con orégano va de 10🥰🥰",
-      receta:
-        "Mezclo una zanahoria rayada con dos huevos, sal, pimienta y oregano hasta tener una mezcla consistente. Ponemos la mezcla en una essen, sin aceites ni agregados. Damos vuelta y ponemos salsa de tomate, queso, tomates, oregano, albaca y lo que quieras! Cuando se derrite el queso retiras.",
-      instagramLink:
-        "https://www.instagram.com/reel/C2IQFkerPDS/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     },
   ];
 
@@ -861,6 +851,10 @@ const RecetasScreen = () => {
   const handleFilter = (type) => {
     setFiltro(type);
   };
+
+  const sortedData = data
+    .slice()
+    .sort((a, b) => a.title.localeCompare(b.title));
 
   const filteredData = filtro
     ? data.filter((item) => item.type === filtro)
@@ -938,14 +932,23 @@ const RecetasScreen = () => {
       </View>
       <ScrollView>
         <View style={styles.body}>
-          {filteredData.map((item) => (
-            <Card
-              key={item.id}
-              title={item.title}
-              image={item.image}
-              type={item.type}
-            />
-          ))}
+          {filtro
+            ? filteredData.map((item) => (
+                <Card
+                  key={item.id}
+                  title={item.title}
+                  image={item.image}
+                  type={item.type}
+                />
+              ))
+            : sortedData.map((item) => (
+                <Card
+                  key={item.id}
+                  title={item.title}
+                  image={item.image}
+                  type={item.type}
+                />
+              ))}
         </View>
       </ScrollView>
     </View>

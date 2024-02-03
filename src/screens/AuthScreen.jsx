@@ -75,6 +75,19 @@ const AuthScreen = () => {
   });
 
   const handleSignUp = () => {
+    // Verificar si ni el correo ni la contraseña están ingresados
+    if (
+      !formState.inputValues.email.trim() &&
+      !formState.inputValues.password.trim()
+    ) {
+      Alert.alert(
+        "Formulario de registro",
+        "Por favor, para regisrarte, ingresa un correo y una contraseña de al menos 6 caracteres.",
+        [{ text: "Ok" }]
+      );
+      return;
+    }
+
     if (formState.formIsValid) {
       dispatch(
         signUp(formState.inputValues.email, formState.inputValues.password)
@@ -89,7 +102,7 @@ const AuthScreen = () => {
             // Registro fallido
             Alert.alert(
               "Recordatorio",
-              "Si tenes email registrado incia sesión, si te estas registrando la contraseña debe tener 6 o mas caracteres",
+              "Si tienes un email registrado, inicia sesión. Si te estás registrando, la contraseña debe tener 6 o más caracteres.",
               [{ text: "Ok" }]
             );
           }

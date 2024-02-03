@@ -6,8 +6,6 @@ import { Linking } from "react-native";
 
 // Asegúrate de importar ShopNavigator
 import ShopNavigator from "./ShopNavigator";
-import CartNavigator from "./CartNavigator";
-import OrdersNavigator from "./OrdersNavigator";
 
 const BottomTabs = createBottomTabNavigator();
 
@@ -39,7 +37,7 @@ const BottomTabNavigator = () => {
       />
       <BottomTabs.Screen
         name="Cart"
-        component={CartNavigator}
+        component={ShopNavigator}
         options={{
           tabBarIcon: ({ color, size }) => (
             <TouchableOpacity onPress={openWhatsApp}>
@@ -50,7 +48,7 @@ const BottomTabNavigator = () => {
       />
       <BottomTabs.Screen
         name="OrdersTab"
-        component={OrdersNavigator}
+        component={ShopNavigator}
         options={{
           tabBarIcon: ({ color, size }) => (
             <TouchableOpacity onPress={openInstagram}>

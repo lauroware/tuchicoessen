@@ -38,7 +38,7 @@ const RecetasScreen = () => {
     },
     {
       id: "5",
-      title: "Tip de cocina: Cómo desglasar una sartén",
+      title: "Tip de cocina: Cómo desengrasar una sartén",
       ingredientes:
         "El desglasado es una técnica utilizada para aprovechar los sabores y jugos pegados al fondo de una sartén después de cocinar carne, aves o pescado. Después de cocinar la proteína, retírala de la sartén y agrega líquido como caldo, vino o jugo de cítricos. Raspando el fondo con una espátula, incorpora los sabores caramelizados a la salsa. Esta salsa se puede utilizar como base para salsas o para agregar sabor a otros platos.",
     },
